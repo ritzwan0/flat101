@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "19cbdc3f-416a-4e9a-91dc-21e53a7ff056",
+		"name": "Flat101",
+		"description": "API to manage Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17749497"
+	},
+	"item": [
+		{
+			"name": "Get All Active Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3212312Gk787ss565656hgbbhjj277",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.29.2",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://www.flat101.es/rest/v1/tasks/all",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flat101",
+						"es"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"tasks",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/all",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"task_id\": \"12345\",\r\n    \"task_type\": \"fetchUrlTitle\",\r\n    \"status\": \"Completed\",\r\n    \"priority\": \"1\"\r\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/all",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								"all"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"No Tasks Found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Task By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3212312Gk787ss565656hgbbhjj277",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.29.2",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://www.flat101.es/rest/v1/tasks/:id",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flat101",
+						"es"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"tasks",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/:id?id=128773",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "128773"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"task_id\": \"128773\",\r\n    \"task_type\": \"callApi\",\r\n    \"status\": \"New\",\r\n    \"priority\": \"0\"\r\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/:id?id=1287333",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								":id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1287333"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"No task by this ID\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3212312Gk787ss565656hgbbhjj277",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.29.2",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"task_type\": \"fetchUrlTitle\",\r\n  \"url\": \"https://www.example.com\"\r\n}"
+				},
+				"url": {
+					"raw": "https://www.flat101.es/rest/v1/tasks/create",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flat101",
+						"es"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"task_type\": \"fetchUrlTitle\",\r\n  \"url\": \"https://www.example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/create",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"task_id\": \"676782\",\r\n    \"task_type\": \"fetchUrlTitle\",\r\n    \"status\": \"New\",\r\n    \"priority\": \"1\"\r\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.29.2",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"task_type\": \"fetchUrl\",\r\n  \"url\": \"https://www.test.com\"\r\n}"
+						},
+						"url": {
+							"raw": "https://www.flat101.es/rest/v1/tasks/create",
+							"protocol": "https",
+							"host": [
+								"www",
+								"flat101",
+								"es"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"tasks",
+								"create"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"Task cannot be created. Please try again later\"\r\n}"
+				}
+			]
+		}
+	]
+}
