@@ -76,9 +76,10 @@ Event Listners are configured to observe any changes in DB. The event is created
 
 ## API Methods
 Following APIs are defined in routes/api.php
-Route::get('tasks/all', 'Controller@showAllActiveTasks');		// List all Active Tasks
-Route::get('tasks/{id}', 'Controller@getTask');	// Get Task details with Task ID
-Route::post('tasks/create', 'Controller@createTask');		// Create a new Task
+•	Route::get('tasks/all', 'Controller@showAllActiveTasks');		// List all Active Tasks
+•	Route::get('tasks/{id}', 'Controller@getTask');	// Get Task details with Task ID
+•	Route::post('tasks/create', 'Controller@createTask');		// Create a new Task
+
 
 ## Swagger file
 
