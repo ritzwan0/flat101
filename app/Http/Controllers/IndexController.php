@@ -42,7 +42,7 @@ class IndexController extends Controller
      * 
      * @return JsonResponse
      */
-	 public function getTask(): JsonResponse
+	 public function getTask(int $id): JsonResponse
      {
         return $this->pubSubService->getTask();
      }
@@ -54,7 +54,7 @@ class IndexController extends Controller
      *
      * @return JsonResponse
      */
-    public function getActiveTasks()
+    public function executeActiveTasks()
 	{
 		$this->pubSubService->executeTasks();
 		//return Tasks::where('status', '=', "New")->get();		
