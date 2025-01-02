@@ -35,12 +35,12 @@ php artisan make:migration create_tasks_table
 Open the newly created migration file located in the database/migrations directory. It will have a timestamp in the filename. In the up method, define the columns for your table. For example:
 
 //TasksSeeder
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-class TasksSeeder extends Migration
-{
-public function up()
+* use Illuminate\Database\Migrations\Migration;
+* use Illuminate\Database\Schema\Blueprint;
+* use Illuminate\Support\Facades\Schema;
+* class TasksSeeder extends Migration
+* {
+* public function up()
 {
 	Schema::create('tasks', function (Blueprint $table) {
 		$table->increments('id'); // Creates an auto-incrementing ID
